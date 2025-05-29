@@ -13,5 +13,3 @@ class Time:
     def __eq__(self, other):
         return (type(self) == type(other)) or self.hour == other.hour and self.minute == other.minute and self.second == other.second
 
-
-class

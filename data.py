@@ -1,7 +1,7 @@
 from classes import Time   # keep your Time class import
 
 routes = {
-    # Sacramento ─────────────────────────────────────────────
+    # Sacramento
     ("Sacramento", "San Francisco"): [87.6, Time(1, 35, 0)],
     ("Sacramento", "San Jose")     : [121.2, Time(1, 55, 0)],
     ("Sacramento", "Fremont")      : [90.3, Time(1, 30, 0)],
@@ -16,7 +16,7 @@ routes = {
     ("Sacramento", "Long Beach")   : [387.6, Time(6, 0, 0)],
     ("Sacramento", "San Diego")    : [489.1, Time(7, 30, 0)],
 
-    # San Francisco ──────────────────────────────────────────
+    # San Francisco
     ("San Francisco", "San Jose")  : [48.5, Time(0, 50, 0)],
     ("San Francisco", "Fremont")   : [43.6, Time(0, 45, 0)],
     ("San Francisco", "Stockton")  : [78.5, Time(1, 25, 0)],
@@ -30,7 +30,7 @@ routes = {
     ("San Francisco", "Long Beach"): [390.6, Time(6, 10, 0)],
     ("San Francisco", "San Diego") : [498.4, Time(7, 40, 0)],
 
-    # San Jose ───────────────────────────────────────────────
+    # San Jose
     ("San Jose", "Fremont")        : [16.2, Time(0, 20, 0)],
     ("San Jose", "Stockton")       : [58.4, Time(1, 0, 0)],
     ("San Jose", "Modesto")        : [72.5, Time(1, 15, 0)],
@@ -43,7 +43,7 @@ routes = {
     ("San Jose", "Long Beach")     : [347.2, Time(5, 25, 0)],
     ("San Jose", "San Diego")      : [455.0, Time(7, 0, 0)],
 
-    # Fremont ────────────────────────────────────────────────
+    # Fremont
     ("Fremont", "Stockton")        : [42.9, Time(0, 45, 0)],
     ("Fremont", "Modesto")         : [57.0, Time(1, 0, 0)],
     ("Fremont", "Fresno")          : [143.7, Time(2, 15, 0)],
@@ -55,7 +55,7 @@ routes = {
     ("Fremont", "Long Beach")      : [351.6, Time(5, 30, 0)],
     ("Fremont", "San Diego")       : [459.4, Time(7, 5, 0)],
 
-    # Stockton ───────────────────────────────────────────────
+    # Stockton
     ("Stockton", "Modesto")        : [30.2, Time(0, 30, 0)],
     ("Stockton", "Fresno")         : [116.8, Time(1, 45, 0)],
     ("Stockton", "San Luis Obispo"): [247.9, Time(4, 0, 0)],
@@ -66,7 +66,7 @@ routes = {
     ("Stockton", "Long Beach")     : [334.7, Time(5, 10, 0)],
     ("Stockton", "San Diego")      : [436.2, Time(6, 40, 0)],
 
-    # Modesto ────────────────────────────────────────────────
+    # Modesto
     ("Modesto", "Fresno")          : [86.6, Time(1, 20, 0)],
     ("Modesto", "San Luis Obispo") : [217.7, Time(3, 30, 0)],
     ("Modesto", "Bakersfield")     : [172.7, Time(2, 40, 0)],
@@ -76,7 +76,7 @@ routes = {
     ("Modesto", "Long Beach")      : [304.5, Time(4, 40, 0)],
     ("Modesto", "San Diego")       : [406.0, Time(6, 15, 0)],
 
-    # Fresno ────────────────────────────────────────────────
+    # Fresno
     ("Fresno", "San Luis Obispo")  : [130.4, Time(2, 10, 0)],
     ("Fresno", "Bakersfield")      : [108.7, Time(1, 35, 0)],
     ("Fresno", "Los Angeles")      : [221.7, Time(3, 20, 0)],
@@ -93,14 +93,14 @@ routes = {
     ("San Luis Obispo", "Long Beach") : [185.0, Time(2, 50, 0)],
     ("San Luis Obispo", "San Diego")  : [272.8, Time(4, 5, 0)],
 
-    # Bakersfield ───────────────────────────────────────────
+    # Bakersfield
     ("Bakersfield", "Los Angeles") : [112.5, Time(1, 45, 0)],
     ("Bakersfield", "Riverside")   : [136.8, Time(2, 5, 0)],
     ("Bakersfield", "Irvine")      : [137.2, Time(2, 5, 0)],
     ("Bakersfield", "Long Beach")  : [121.0, Time(1, 50, 0)],
     ("Bakersfield", "San Diego")   : [222.5, Time(3, 25, 0)],
 
-    # Greater L.A. & SoCal ─────────────────────────────────
+    # SoCal
     ("Los Angeles", "Riverside")   : [55.9, Time(0, 55, 0)],
     ("Los Angeles", "Irvine")      : [45.0, Time(0, 45, 0)],
     ("Los Angeles", "Long Beach")  : [24.0, Time(0, 30, 0)],

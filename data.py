@@ -85,7 +85,7 @@ routes = {
     ("Fresno", "Long Beach")       : [230.2, Time(3, 25, 0)],
     ("Fresno", "San Diego")        : [331.7, Time(5, 0, 0)],
 
-    # San Luis Obispo ───────────────────────────────────────
+    # San Luis Obispo
     ("San Luis Obispo", "Bakersfield"): [109.8, Time(1, 50, 0)],
     ("San Luis Obispo", "Los Angeles"): [186.2, Time(2, 55, 0)],
     ("San Luis Obispo", "Riverside")  : [216.5, Time(3, 20, 0)],

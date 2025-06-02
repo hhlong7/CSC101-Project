@@ -27,19 +27,25 @@ def get_distance(start, end):
         if d != None:
             return d[0]
         else:
-            raise Exception("Location is not within California")
+            raise Exception("Location is not within the database.")
     except Exception as e:
         print(e)
 
 def get_time(start, end):
-    location_key = (start, end)
-    return routes.get(location_key)[1]
+    try:
+        location_key = (start, end)
+        d = routes.get(location_key)
+        if d != None:
+            return d[1]
+        else:
+            raise Exception("Try another location.")
+    except Exception as e:
+        print(e)
 
 def third_location(start, end, stop):
     first = (start, stop)
     second = (stop, end)
     total_distance = routes.get(first)[0] + routes.get(second)[0]
     return total_distance
-
 
 

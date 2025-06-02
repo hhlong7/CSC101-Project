@@ -42,6 +42,7 @@ routes = {
     ("San Jose", "Irvine")         : [376.2, Time(5, 50, 0)],
     ("San Jose", "Long Beach")     : [347.2, Time(5, 25, 0)],
     ("San Jose", "San Diego")      : [455.0, Time(7, 0, 0)],
+    ("San Jose","San Francisco")  : [48.5, Time(0, 50, 0)],
 
     # Fremont
     ("Fremont", "Stockton")        : [42.9, Time(0, 45, 0)],
@@ -115,3 +116,5 @@ routes = {
 
     ("Long Beach", "San Diego")    : [93.0, Time(1, 30, 0)]
 }
+
+

@@ -10,6 +10,3 @@ class Time:
     def __str__(self):
         return "Hours: {}, Minutes: {}, Seconds: {}".format(self.hour, self.minute, self.second)
 
-    def __eq__(self, other):
-        return (type(self) == type(other)) or self.hour == other.hour and self.minute == other.minute and self.second == other.second
-

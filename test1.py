@@ -11,9 +11,9 @@ routes = {
 
 
 
-if get_distance("Sacramento", "Seattle") is not None:
+if get_distance("Sacramento", "San Jose") is not None:
     # Do something with my_variable, assuming it's not None
-    print(get_distance("Sacramento", "Seattle"))
+    print(get_distance("Sacramento", "San Jose"))
 else:
     # Handle the case where my_variable is None
     print("Location not in CA")

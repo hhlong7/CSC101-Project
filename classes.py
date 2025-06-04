@@ -1,12 +1,11 @@
 class Time:
-    def __init__(self, hour, minute, second):
+    def __init__(self, hour, minute):
         self.hour = hour
         self.minute = minute
-        self.second = second
 
     def __repr__(self):
-        return "Hours: {}, Minutes: {}, Seconds: {}".format(self.hour, self.minute, self.second)
+        return "Hours: {}, Minutes: {}".format(self.hour, self.minute)
 
     def __str__(self):
-        return "Hours: {}, Minutes: {}, Seconds: {}".format(self.hour, self.minute, self.second)
+        return "Hours: {}, Minutes: {}".format(self.hour, self.minute)
 

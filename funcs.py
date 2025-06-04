@@ -12,9 +12,6 @@ def timeadd(t1: Time, t2: Time)-> Time:
     totalhour += mintohour
     return Time(totalhour, totalmin)
 
-def mile_to_km(n1):
-    return n1 * 1.609
-
 def get_distance(start, end):
     try:
         location_key = (start, end)
@@ -22,7 +19,7 @@ def get_distance(start, end):
         if d != None:
             return d[0]
         else:
-            raise Exception("Location is not within the database.")
+            raise Exception("\nLocation is not within the database.")
     except Exception as e:
         print(e)
 
@@ -39,66 +36,86 @@ def get_time(start, end):
         print(e)
 
 def one_stop(start, stop, end):
-    first = (start, stop)
-    second = (stop, end)
-    total_distance = routes.get(first)[0] + routes.get(second)[0]
-    return total_distance
+    try:
+        first = (start, stop)
+        second = (stop, end)
+        total_distance = routes.get(first)[0] + routes.get(second)[0]
+        return total_distance
+    except TypeError:
+        print("Location is not in Database")
 
 def one_stop_time(start, stop, end):
-    first = (start, stop)
-    second = (stop, end)
-    time_for_first = routes.get(first)[1]
-    time_for_second = routes.get(second)[1]
-    total_time = timeadd(time_for_first, time_for_second)
-    return total_time
+    try:
+        first = (start, stop)
+        second = (stop, end)
+        time_for_first = routes.get(first)[1]
+        time_for_second = routes.get(second)[1]
+        total_time = timeadd(time_for_first, time_for_second)
+        return total_time
+    except TypeError:
+        print("Try another location.")
 
 def two_stops(start, stop1, stop2, end):
-    first = (start, stop1)
-    second = (stop1, stop2)
-    third = (stop2, end)
-    total_distance = routes.get(first)[0] + routes.get(second)[0] + routes.get(third)[0]
-    return total_distance
+    try:
+        first = (start, stop1)
+        second = (stop1, stop2)
+        third = (stop2, end)
+        total_distance = routes.get(first)[0] + routes.get(second)[0] + routes.get(third)[0]
+        return total_distance
+    except TypeError:
+        print("\nLocation is not in Database.")
 
 def two_stops_time(start, stop1, stop2, end):
-    first = (start, stop1)
-    second = (stop1, stop2)
-    third = (stop2, end)
-    time_for_first = routes.get(first)[1]
-    time_for_second = routes.get(second)[1]
-    time_for_third = routes.get(third)[1]
-    time1 = timeadd(time_for_first, time_for_second)
-    time2 = timeadd(time1, time_for_third)
-    total_time = time2
-    return total_time
+    try:
+        first = (start, stop1)
+        second = (stop1, stop2)
+        third = (stop2, end)
+        time_for_first = routes.get(first)[1]
+        time_for_second = routes.get(second)[1]
+        time_for_third = routes.get(third)[1]
+        time1 = timeadd(time_for_first, time_for_second)
+        time2 = timeadd(time1, time_for_third)
+        total_time = time2
+        return total_time
+    except TypeError:
+        print("Try another location.")
 
 def three_stops(start, stop1, stop2, stop3, end):
-    first = (start, stop1)
-    second = (stop1, stop2)
-    third = (stop2, stop3)
-    four = (stop3, end)
-    total_distance = routes.get(first)[0] + routes.get(second)[0] + routes.get(third)[0] + routes.get(four)[0]
-    return total_distance
+    try:
+        first = (start, stop1)
+        second = (stop1, stop2)
+        third = (stop2, stop3)
+        four = (stop3, end)
+        total_distance = routes.get(first)[0] + routes.get(second)[0] + routes.get(third)[0] + routes.get(four)[0]
+        return total_distance
+    except TypeError:
+        print("Location is not in Database")
 
 def three_stops_time(start, stop1, stop2, stop3, end):
-    first = (start, stop1)
-    second = (stop1, stop2)
-    third = (stop2, stop3)
-    four = (stop3, end)
-    time_for_first = routes.get(first)[1]
-    time_for_second = routes.get(second)[1]
-    time_for_third = routes.get(third)[1]
-    time_for_four = routes.get(four)[1]
-    time1 = timeadd(time_for_first, time_for_second)
-    time2 = timeadd(time1, time_for_third)
-    time3 = timeadd(time2, time_for_four)
-    total_time = time3
-    return total_time
-
-def time_in_hours(t):
-    pass
+    try:
+        first = (start, stop1)
+        second = (stop1, stop2)
+        third = (stop2, stop3)
+        four = (stop3, end)
+        time_for_first = routes.get(first)[1]
+        time_for_second = routes.get(second)[1]
+        time_for_third = routes.get(third)[1]
+        time_for_four = routes.get(four)[1]
+        time1 = timeadd(time_for_first, time_for_second)
+        time2 = timeadd(time1, time_for_third)
+        time3 = timeadd(time2, time_for_four)
+        total_time = time3
+        return total_time
+    except TypeError:
+        print("Try another location.")
 
 def avg_v(d, t):
-    pass
+    hour = int(t.hour)
+    minutes = int(t.minute)
+    minutes_to_hour = minutes / 60
+    total_hour = hour + minutes_to_hour
+    speed = d / total_hour
+    return round(speed,2)
 
 def welcome():
     print("This is the tool to show you time and distance between cities in California.")

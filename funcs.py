@@ -42,7 +42,7 @@ def one_stop(start, stop, end):
         total_distance = routes.get(first)[0] + routes.get(second)[0]
         return total_distance
     except TypeError:
-        print("Location is not in Database")
+        print("\nLocation is not in Database")
 
 def one_stop_time(start, stop, end):
     try:
@@ -89,7 +89,7 @@ def three_stops(start, stop1, stop2, stop3, end):
         total_distance = routes.get(first)[0] + routes.get(second)[0] + routes.get(third)[0] + routes.get(four)[0]
         return total_distance
     except TypeError:
-        print("Location is not in Database")
+        print("\nLocation is not in Database")
 
 def three_stops_time(start, stop1, stop2, stop3, end):
     try:
@@ -123,9 +123,6 @@ def welcome():
     print("\n\tSacramento, Stockton, San Francisco, Fremont, Modesto, San Jose, Fresno, San Luis Obispo, "
           "\n\tBakersfield, Los Angeles, Long Beach, Riverside, Irvine, San Diego.")
 
-# print(two_stops_time("Sacramento", "San Francisco", "San Jose", "San Luis Obispo"))
-#
-# print(three_stops_time("Sacramento", "San Francisco", "San Jose", "San Luis Obispo", "Bakersfield"))
 
 
 

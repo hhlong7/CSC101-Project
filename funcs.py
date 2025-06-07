@@ -2,6 +2,7 @@ from classes import *
 from data import *
 
 def timeadd(t1: Time, t2: Time)-> Time:
+#time add functions.
     totalmin = t1.minute + t2.minute
     totalhour = t1.hour + t2.hour
     secondtomin = 0
@@ -13,6 +14,7 @@ def timeadd(t1: Time, t2: Time)-> Time:
     return Time(totalhour, totalmin)
 
 def get_distance(start, end):
+#get the distance when input 2 location
     try:
         location_key = (start, end)
         d = routes.get(location_key)
@@ -25,6 +27,7 @@ def get_distance(start, end):
 
 
 def get_time(start, end):
+#get the time when input 2 locations
     try:
         location_key = (start, end)
         d = routes.get(location_key)
@@ -36,6 +39,7 @@ def get_time(start, end):
         print(e)
 
 def one_stop(start, stop, end):
+#get the distance when input 3 locations
     try:
         first = (start, stop)
         second = (stop, end)
@@ -45,6 +49,7 @@ def one_stop(start, stop, end):
         print("\nLocation is not in Database")
 
 def one_stop_time(start, stop, end):
+#get the time when input 3 locations
     try:
         first = (start, stop)
         second = (stop, end)
@@ -56,6 +61,7 @@ def one_stop_time(start, stop, end):
         print("Try another location.")
 
 def two_stops(start, stop1, stop2, end):
+#get the distance when input 4 locations
     try:
         first = (start, stop1)
         second = (stop1, stop2)
@@ -66,6 +72,7 @@ def two_stops(start, stop1, stop2, end):
         print("\nLocation is not in Database.")
 
 def two_stops_time(start, stop1, stop2, end):
+# get the time when input 4 locations, try and except for location outside of the database
     try:
         first = (start, stop1)
         second = (stop1, stop2)
@@ -81,6 +88,7 @@ def two_stops_time(start, stop1, stop2, end):
         print("Try another location.")
 
 def three_stops(start, stop1, stop2, stop3, end):
+#get the distance when input 5 locations
     try:
         first = (start, stop1)
         second = (stop1, stop2)
@@ -92,6 +100,7 @@ def three_stops(start, stop1, stop2, stop3, end):
         print("\nLocation is not in Database")
 
 def three_stops_time(start, stop1, stop2, stop3, end):
+#get the time when input 5 locations, try and except for location outside of the database
     try:
         first = (start, stop1)
         second = (stop1, stop2)
@@ -110,6 +119,7 @@ def three_stops_time(start, stop1, stop2, stop3, end):
         print("Try another location.")
 
 def avg_v(d, t):
+#This function compute the velocity that is required to get to the final destination within the given time
     hour = int(t.hour)
     minutes = int(t.minute)
     minutes_to_hour = minutes / 60
@@ -118,6 +128,7 @@ def avg_v(d, t):
     return round(speed,2)
 
 def welcome():
+#This function will display the welcome message when the user run the code.
     print("This is the tool to show you time and distance between cities in California.")
     print("Cities included (from North to South):")
     print("\n\tSacramento, Stockton, San Francisco, Fremont, Modesto, San Jose, Fresno, San Luis Obispo, "

@@ -3,8 +3,8 @@ from data import *
 from classes import *
 
 def main():
-    welcome()
-    i1 = input("\nInitial location: ")
+    welcome() #welcome
+    i1 = input("\nInitial location: ") #input locations
     i2 = input("Final location: ")
     distance = get_distance(i1, i2)
     time = get_time(i1, i2)
@@ -12,11 +12,11 @@ def main():
         print("\nDistance {}, ETA: {}".format(distance, time))
         speed = avg_v(distance, time)
         print("You need to drive at", speed, "MPH", "to get there within that ETA.")
-        new = input("\nWant to stop by any place on the way? (y/n) ")
+        new = input("\nWant to stop by any place on the way? (y/n) ") #opt for stops on the way
 
         if new == 'y':
             stops = int(input("How many stops: (1,2,3) "))
-            if stops == 1:
+            if stops == 1: #1 stop
                 stop1 = input("Stop: ")
                 distance1 = one_stop(i1, stop1, i2)
                 time1 = one_stop_time(i1, stop1, i2)
@@ -25,7 +25,7 @@ def main():
                     speed = avg_v(distance1, time1)
                     print("\nYou need to drive at",speed, "MPH", "to get there within that ETA.")
 
-            if stops == 2:
+            if stops == 2: #2 stops
                 stop1 = input("First stop: ")
                 stop2 = input("Second stop: ")
                 distance2 = two_stops(i1, stop1, stop2, i2)
@@ -35,7 +35,7 @@ def main():
                     speed = avg_v(distance2, time2)
                     print("\nYou need to drive at",speed, "MPH", "to get there within that ETA.")
 
-            if stops == 3:
+            if stops == 3: #3 stops
                 stop1 = input("First stop: ")
                 stop2 = input("Second stop: ")
                 stop3 = input("Third stop: ")
